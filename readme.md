@@ -10,7 +10,7 @@
     A simple Weather App in HTML, CSS and JS, using OpenWeatherMapAPI.
     <br/>
     <br/>
-    <a href="https://github.com/LobbyLobs/Weather-WebApp"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/gabrielelobosco/Weather-WebApp"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
     <a href="https://gabrielelobosco.github.io/Weather-WebApp">View Demo</a>
