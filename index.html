@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <title>Weather App</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+    <title>Weather App</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="flex">
         <div class="container">
             <div class="searchbox">
-                <p style="display:inline;color:white;">Current Weather in </p><input type="city" autocomplete="off" id="a" name="a">
+                <p style="display:inline;color:white;">Current Weather in </p><input type="city" autocomplete="off" id="a" name="a" style="font-family: 'Comfortaa'">
                 <label>
                     <input type="submit" onClick="getweather(getElementById('a').value)" value="Detect">
                     <svg id="searchsvg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/> </svg>
                 </label>
             </div>
-
+        
             <div class="results">
                 <p id="city"></p>
                 <p id="weather_temp"></p>
@@ -25,36 +32,45 @@
                 </div>
                 
                 <hr id="hr">
-
+            
                 <div id="icon"><img id="wicon" src="" height="50px" width="50px" alt=""><p id="weather_desc"></p></div>
                 <p id="weather_feli"></p>
                 <p id="weather_hum"></p>
                 <p id="weather_pres"></p>
-
+            
                 <hr id="hr2">
                 
                 <div class="line2">
                     <p id="sunrise"></p><p id="separe"> | </p><p id="sunset"></p>
                 </div>
-
-            <script>
-                hr = document.getElementById("hr");
-                hr.style.display = "none";
-
-                hr2 = document.getElementById("hr2");
-                hr2.style.display = "none";
-
-                icon = document.getElementById("icon");
-                icon.style.display = "none";
-
-                separe = document.getElementById("separe");
-                separe.style.display = "none";
-
-                separe2 = document.getElementById("separe2");
-                separe2.style.display = "none";
-            </script>
-
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
+
+<script>
+    hr = document.getElementById("hr");
+    hr.style.display = "none";
+
+    hr2 = document.getElementById("hr2");
+    hr2.style.display = "none";
+
+    icon = document.getElementById("icon");
+    icon.style.display = "none";
+
+    separe = document.getElementById("separe");
+    separe.style.display = "none";
+
+    separe2 = document.getElementById("separe2");
+    separe2.style.display = "none";
+
+    var input = document.getElementById('a');
+
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            getweather(document.getElementById('a').value);
+  }
+});
+</script>

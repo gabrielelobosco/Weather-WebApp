@@ -4,7 +4,6 @@ function getweather(a) {
 
     $.getJSON($URL, function( data ) {
 
-
         weather_desc = JSON.stringify(data.weather[0].main);
         weather_temp = JSON.stringify(data.main.temp);
 

@@ -9,38 +9,20 @@ body {
     animation: gradient 5s linear infinite;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.sunnyanimation {
-    animation: sunny 5s linear infinite;
-}
-
-@keyframes sunny {
-    from {transform: rotate(0)}
-    to {transform: rotate(360deg);}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 97vh;
 }
 
 .container {
-    position: absolute;
-    top: 10%;
     height: 35rem;
-    left: 10%;
-    right: 10%;
-    width: 80%;
+    width: 400px;
     border-radius: 5px;
     background-color: rgb(236, 236, 236);
     overflow: hidden;
-    box-shadow: 0px 0px 35px 8px rgba(35, 236, 216, 0.541);
 }
 
 .searchbox {
@@ -51,6 +33,7 @@ body {
     border-radius: 5px;
     text-align: center;
     box-shadow: 0px 10px 15px 0px #c5c5c5;
+    font-family: 'Comfortaa';
 }
 
 input[type=city] {
@@ -73,6 +56,15 @@ input[type=city]:focus {
 
 input[type=submit] {
     display: none;
+}
+
+#searchsvg {
+    transform: rotate(0deg);
+    transition: all 1s;
+}
+
+#searchsvg:hover {
+    transform: rotate(90deg);
 }
 
 p {
@@ -130,6 +122,10 @@ hr {
     font-family: 'Comfortaa', cursive;
 }
 
+.sunnyanimation {
+    animation: sunny 5s linear infinite;
+}
+
 #weather_tmin {
     display: inline;
     color: rgb(137, 202, 255);
@@ -153,4 +149,21 @@ hr {
 #sunrise, #sunset, #separe {
     display: inline;
     color: rgb(146, 146, 146);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes sunny {
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg);}
 }
